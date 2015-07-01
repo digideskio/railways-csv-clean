@@ -35,9 +35,11 @@ done
 Much cleaner:
 
 ```
-STREET,RRID,lon,lat
-AIRPORT ROAD,,38.3284258,-98.8478368
+EFFDATE,REASON,STREET,lon,lat
+140108,1,AIRPORT ROAD,-98.8478368,38.3284258
 ```
+
+(`REASON` is salient because value 3 means closed or abanoned. See  [this PDF](https://www.fra.dot.gov/elib/document/3088) for a field reference.
 
 This can be converted into a Shapefile easily using the supplied VRT file:
 
