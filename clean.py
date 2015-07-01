@@ -3,17 +3,17 @@
 import csv
 import sys
 
-CSV_FILE='/Users/martijnv/tmp/crossings/gcispubl.csv'
-CSV_OUTFILE='/Users/martijnv/tmp/crossings/gcispubl_clean.csv'
-LON_FIELD_LOC=84
-LAT_FIELD_LOC=83
-OUT_LON_FIELDNAME = 'lon'
-OUT_LAT_FIELDNAME = 'lat'
-ROWS_TO_KEEP=[1, 3, 13]
-DECIMAL_PRECISION=7
-DELIMITER_IN = ','
-DELIMITER_OUT = ','
-SKIP_NULL_ISLAND = True
+CSV_FILE='/Users/martijnv/tmp/crossings/gcispubl.csv'  # input csv file
+CSV_OUTFILE='/Users/martijnv/tmp/crossings/gcispubl_clean.csv'  # output csv file
+LON_FIELD_LOC=84  # position of longitude field (0 based)
+LAT_FIELD_LOC=83  # position of latitude field (0 based)
+OUT_LON_FIELDNAME = 'lon'  # desired name out output longitude field
+OUT_LAT_FIELDNAME = 'lat'  # desired name out output latitude field
+ROWS_TO_KEEP=[1, 3, 13]  # zero based positions of other salient fields you want to keep
+DECIMAL_PRECISION=7  # decimal precision of lat / lon fields
+DELIMITER_IN = ','  # delimiter used in input CSV file
+DELIMITER_OUT = ','  # desired delimiter for output CSV file
+SKIP_NULL_ISLAND = True  # filter out 0,0 coordinates (duh)
 
 failed_rows = []
 row_count = 0
