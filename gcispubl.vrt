@@ -1,0 +1,9 @@
+<OGRVRTDataSource>
+  <OGRVRTLayer name="crossings">
+    <SrcDataSource relativeToVRT="1">./gcispubl_clean.csv</SrcDataSource>
+    <SrcLayer>gcispubl_clean</SrcLayer>
+    <GeometryType>wkbPoint</GeometryType>
+    <LayerSRS>WGS84</LayerSRS>
+    <GeometryField encoding="PointFromColumns" x="lon" y="lat"/>
+  </OGRVRTLayer>
+</OGRVRTDataSource>
